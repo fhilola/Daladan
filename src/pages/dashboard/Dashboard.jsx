@@ -16,19 +16,19 @@ const Dashboard = () => {
                             <NavLink to='/dashboard' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>Monitoring</NavLink>
                         </li>
                         <li className='navbar-menu__item'>
-                            <NavLink to='/dashboard/manage-admin' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>Manage Admin</NavLink>
+                            <NavLink to='/dashboard/manage-admin' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--activate' : 'navbar-menu__link'}>Admin Qo`shish</NavLink>
                         </li>
                         <li className='navbar-menu__item'>
-                            <NavLink to='/dashboard/category' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>Category</NavLink>
+                            <NavLink to='/dashboard/category' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--activate' : 'navbar-menu__link'}>Kategoriyalar</NavLink>
                         </li>
                         <li className='navbar-menu__item'>
-                            <NavLink to='/dashboard/news' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>News</NavLink>
+                            <NavLink to='/dashboard/news' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--activate' : 'navbar-menu__link'}>Yangiliklar</NavLink>
                         </li>
                         <li className='navbar-menu__item'>
-                            <NavLink to='/dashboard/banner' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>Banner</NavLink>
+                            <NavLink to='/dashboard/banner' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--activate' : 'navbar-menu__link'}>Banner</NavLink>
                         </li>
                         <li className='navbar-menu__item'>
-                            <NavLink to='/dashboard/faq' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--active' : 'navbar-menu__link'}>FAQ</NavLink>
+                            <NavLink to='/dashboard/faq' end className={({isActive})=> isActive ? 'navbar-menu__link navbar-menu__link--activate' : 'navbar-menu__link'}>FAQ</NavLink>
                         </li>
                     </ul>
                     </div>

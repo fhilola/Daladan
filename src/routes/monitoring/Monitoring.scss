@@ -1,0 +1,67 @@
+.monitoring{
+    h2{
+        font-size: 28px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    h3{
+        font-size: 23px;
+    }
+}
+.apexcharts-active,
+.apexcharts-tooltip-title {
+    background-color: #030229 !important;
+    color: var(--primary-light-color) !important;
+}
+
+.apexcharts-toolbar {
+    display: none !important;
+}
+
+.app {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+.mixed-chart {
+    background-color: gold;
+    width: 100%;
+    height: 100%;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ant-select-selector {
+    background-color: var(--primary-green-color) !important;
+    color: var(--primary-light-color) !important;
+    border: none !important;
+}
+
+.ant-select-arrow {
+    color: var(--primary-light-color) !important;
+}
+
+.anticon {
+    color: var(--primary-light-color) !important;
+}
+
+.ant-picker-input {
+    input {
+        display: none !important;
+    }
+}
+
+.monitoring-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
