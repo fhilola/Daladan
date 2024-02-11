@@ -1,0 +1,22 @@
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2{
+        font-size: 28px;
+        font-weight: 700;
+        margin: 30px 0;
+    }
+}
+.ant-modal-footer, .ant-modal-header{
+    display: none;
+}
+.modal{
+    h3{
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+.anticon{
+    color: #000 !important;
+}

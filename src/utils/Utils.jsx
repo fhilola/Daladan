@@ -1,5 +1,6 @@
-import React from 'react'
 import './Utils.scss'
+import React, { useState } from 'react';
+
 
 const Button = ({children, type, onClick}) => {
   return (
@@ -26,4 +27,56 @@ const Container = ({children}) => {
     <div className='container'>{children}</div>
   )
 }
-export {Button, Form, LabelInput, Container}
+
+const Table = ({data, type}) => {
+  return (
+    <table className='table'>
+      <thead>
+        <tr>
+          <th></th>
+          {
+            Object.keys(data[0]).map((key, index)=>
+            <th key={index}>{key}</th>
+            )
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          data&&
+          data.map((admin, index)=>
+          <tr key={index}>
+            <td>{index+1}</td>
+            {
+              Object.values(admin).map((value, index)=>
+              <td key={index}>{value}</td>
+              )
+            }
+          </tr>
+          )
+        }
+      </tbody>
+    </table>
+  )
+}
+
+const OpenModal = ({children}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  return (
+    <>
+      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        {children}
+      </Modal>
+    </>
+  )
+}
+export {Button, Form, LabelInput, Container, Table, OpenModal}
