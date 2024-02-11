@@ -3,8 +3,14 @@ import './Auth.scss'
 import AuthImage from '../../assets/auth.png'
 import Logo from '../../assets/logo.svg'
 import { Button, Form, LabelInput } from '../../utils/Utils'
+import { useNavigate } from 'react-router-dom'
 
 const Auth = () => {
+  const navigate = useNavigate()
+  function handleNavigate(e){
+    e.preventDefault()
+    navigate('/dashboard')
+  }
   return (
     <section className='auth'>
       <div className='auth-image'>
@@ -18,7 +24,7 @@ const Auth = () => {
           <Form>
             <LabelInput text='Telefon raqam' placeholder='Telefon raqam' />
             <LabelInput text='Parol' placeholder='Parol' />
-            <Button type='submit'>Tizimga kirish</Button>
+            <Button onClick={(e)=>handleNavigate(e)} type='submit'>Tizimga kirish</Button>
           </Form>
         </div>
       </div>

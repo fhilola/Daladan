@@ -1,12 +1,11 @@
 import React from 'react'
 import './Utils.scss'
 
-const Button = ({children, type}) => {
+const Button = ({children, type, onClick}) => {
   return (
-    <button type={type} className='btn'>{children}</button>
+    <button type={type} className='btn' onClick={onClick}>{children}</button>
   )
 }
-
 
 const Form = ({children}) => {
   return (
@@ -21,4 +20,10 @@ const LabelInput = ({type, text, placeholder}) => {
     </label>
   )
 }
-export {Button, Form, LabelInput}
+
+const Container = ({children}) => {
+  return (
+    <div className='container'>{children}</div>
+  )
+}
+export {Button, Form, LabelInput, Container}
