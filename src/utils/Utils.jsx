@@ -9,8 +9,8 @@ import { } from 'antd';
 const buttonWidth = 80;
 const content = (
   <div className='popover'>
-    <button><BsTrash3/>O`chirish</button>
-    <button><RiEdit2Line/>O`zgartirish</button>
+    <button><BsTrash3 />O`chirish</button>
+    <button><RiEdit2Line />O`zgartirish</button>
   </div>
 );
 
@@ -110,7 +110,7 @@ const Table = ({ data, type }) => {
                   )
                 }
                 {
-                  type === 'category' ?
+                  type === 'category' || type === 'bolim' ?
                     <td style={{ textAlign: 'end', display: 'flex', justifyContent: 'center' }}>
                       <div
                         style={{
@@ -118,7 +118,7 @@ const Table = ({ data, type }) => {
                         }}
                       >
                         <Popover placement="left" content={content} arrow={mergedArrow}>
-                          <AntButton style={{border: 'none'}}>⋮</AntButton>
+                          <AntButton style={{ border: 'none' }}>⋮</AntButton>
                         </Popover>
                       </div>
                     </td> : null

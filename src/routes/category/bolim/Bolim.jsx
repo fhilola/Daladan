@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Button, Form, LabelInput } from '../../../utils/Utils';
-import { Modal } from 'antd';
+import { Button, Form, LabelInput, Table } from '../../../utils/Utils';
+import { Modal  } from 'antd';
+import data from '../../../data/bolimlar.json'
 
 const Bolim = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +31,7 @@ const Bolim = () => {
           </Form>
         </Modal>
       </div>
+      <Table data={data} type={'bolim'}/>
     </section>
   )
 }
