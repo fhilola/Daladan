@@ -17,32 +17,10 @@
 .apexcharts-toolbar {
     display: none !important;
 }
-
-.app {
-    background-color: red;
-    width: 100%;
-    height: 100%;
-}
-
-.mixed-chart {
-    background-color: gold;
-    width: 100%;
-    height: 100%;
-
-    svg {
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .ant-select-selector {
     background-color: var(--primary-green-color) !important;
     color: var(--primary-light-color) !important;
     border: none !important;
-}
-
-.ant-select-arrow {
-    color: var(--primary-light-color) !important;
 }
 
 .anticon {

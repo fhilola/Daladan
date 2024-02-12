@@ -1,0 +1,15 @@
+.category-menu{
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    margin: 20px 0;
+}
+.category__link {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secondary-dark-color);
+    &--active{
+        color: var(--primary-green-color);
+        border-bottom: 1px solid var(--primary-green-color);
+    }
+}
