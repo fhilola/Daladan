@@ -1,0 +1,26 @@
+.news__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 20px;
+    height: 600px;
+    overflow: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.news__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 20px;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+    h4{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p{
+        width: 570px;
+    }
+}
