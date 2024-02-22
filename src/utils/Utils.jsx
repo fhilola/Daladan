@@ -131,14 +131,15 @@ const Table = ({ data, type }) => {
 }
 
 const SwitchOnButton = () => {
-   const [defaultChecked, setDefaultChecked] = useState(false);
+   const [defaultChecked, setDefaultChecked] = useState(true);
   const onChange = (checked) => {
+    console.log(checked);
     console.log(`switch to ${checked}`);
     setDefaultChecked(checked);
   };
   return(
     <td>
-      <Switch style={defaultChecked ? { backgroundColor: 'var(--primary-green-color)' } : { backgroundColor: 'var(--secondary-dark-color)' }} defaultChecked onChange={onChange} />
+      <Switch  className={defaultChecked ? 'switch-button checked' : 'unchecked'}  defaultChecked onChange={onChange} />
     </td>
   )
 }
@@ -150,7 +151,7 @@ const SwitchOffButton = () => {
   };
   return(
     <td>
-      <Switch style={defaultChecked ? { backgroundColor: 'var(--primary-green-color)' } : { backgroundColor: 'var(--secondary-dark-color)' }} onChange={onChange} />
+      <Switch className={defaultChecked ? 'switch-button checked' : 'unchecked'}  onChange={onChange} />
     </td>
   )
 }

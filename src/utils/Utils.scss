@@ -89,6 +89,14 @@
     }
 }
 
+.switch-button, .checked{
+    background-color: var(--primary-green-color) !important;
+}
+
+.unchecked{
+    background-color: var(--secondary-dark-color);
+}
+
 .container {
     max-width: 1380px;
     padding: 0 20px;
