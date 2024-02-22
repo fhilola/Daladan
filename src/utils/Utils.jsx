@@ -73,11 +73,7 @@ const Table = ({ data, type }) => {
       pointAtCenter: true,
     };
   }, [arrow]);
-  const [defaultChecked, setDefaultChecked] = useState(false);
-  const onChange = (checked) => {
-    console.log(`switch to ${checked}`);
-    setDefaultChecked(checked);
-  };
+ 
   return (
     <div className="table__wrapper">
       <table className='table'>
@@ -104,8 +100,10 @@ const Table = ({ data, type }) => {
                 {
                   Object.values(admin).map((value, index) =>
                     index === 0 && type === 'category' ? <td key={index}><img src={Category} alt="category" /></td> :
-                      value === 'false' ? <td><Switch style={{ backgroundColor: 'var(--primary-green-color)' }} defaultChecked onChange={onChange} /></td> :
-                        value === 'true' ? <td><Switch style={defaultChecked ? { backgroundColor: 'var(--primary-green-color)' } : { backgroundColor: 'var(--secondary-dark-color)' }} onChange={onChange} /></td> :
+                      value === 'false' ?
+                        <SwitchOnButton/>:
+                        value === 'true' ?
+                          <SwitchOffButton/> :
                           <td key={index}>{value}</td>
                   )
                 }
@@ -132,6 +130,31 @@ const Table = ({ data, type }) => {
   )
 }
 
+const SwitchOnButton = () => {
+   const [defaultChecked, setDefaultChecked] = useState(false);
+  const onChange = (checked) => {
+    console.log(`switch to ${checked}`);
+    setDefaultChecked(checked);
+  };
+  return(
+    <td>
+      <Switch style={{ backgroundColor: 'var(--primary-green-color)' }} defaultChecked onChange={onChange} />
+    </td>
+  )
+}
+const SwitchOffButton = () => {
+   const [defaultChecked, setDefaultChecked] = useState(false);
+  const onChange = (checked) => {
+    console.log(`switch to ${checked}`);
+    setDefaultChecked(checked);
+  };
+  return(
+    <td>
+      <Switch style={defaultChecked ? { backgroundColor: 'var(--primary-green-color)' } : { backgroundColor: 'var(--secondary-dark-color)' }} onChange={onChange} />
+    </td>
+  )
+}
+
 const OpenModal = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -151,4 +174,6 @@ const OpenModal = ({ children }) => {
     </>
   )
 }
-export { Button, Form, LabelInput, Container, Table, OpenModal }
+
+
+export { Button, Form, LabelInput, Container, Table, OpenModal, SwitchOnButton, SwitchOffButton }
