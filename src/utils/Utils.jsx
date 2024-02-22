@@ -138,7 +138,7 @@ const SwitchOnButton = () => {
   };
   return(
     <td>
-      <Switch style={{ backgroundColor: 'var(--primary-green-color)' }} defaultChecked onChange={onChange} />
+      <Switch style={defaultChecked ? { backgroundColor: 'var(--primary-green-color)' } : { backgroundColor: 'var(--secondary-dark-color)' }} defaultChecked onChange={onChange} />
     </td>
   )
 }
